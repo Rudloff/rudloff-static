@@ -33,6 +33,7 @@ strong {
 
 .part li {
     display: inline-block;
+    position: relative;
     list-style-type: none;
     margin-left: 5px;
 }
@@ -50,17 +51,60 @@ strong {
 .small_cat li img {
     max-width: 35px;
     max-height: 35px;
+    min-height: 35px;
 }
 
 .part li a {
     border-radius: 100%;
     display: table-cell;
     text-align: center;
+    text-decoration: none;
     width: 55px;
 }
 
-
-.part li a:focus, .part li a:hover {
+.part li a:focus img, .part li a:hover img {
     opacity: 0.7;
     outline: medium none;
+}
+
+.tooltip {
+    display: block;
+    position: absolute;
+        bottom: -45px; right: -9px;
+    padding: .25em .5em;
+    background-color: #fcfcfc;
+    border-radius: .2rem;
+    color: #252525;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    white-space: nowrap;
+}
+
+.tooltip::after {
+    display: block;
+    position: absolute;
+        top: -5px; right: 32px;
+    height: .6rem;
+    width: .6rem;
+    content: '';
+    background: #fcfcfc;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.part li:nth-of-type(-n + 2) a .tooltip {
+    left: -9px;
+    right: auto;
+}
+
+.part li:nth-of-type(-n + 2) a .tooltip::after {
+    left: 32px;
+    right: auto;
+}
+
+@media all and (min-width: 480px) {
+  .part li a:focus .tooltip, .part li a:hover .tooltip {
+      opacity: .85;
+  }
 }
