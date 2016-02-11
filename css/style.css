@@ -79,6 +79,7 @@ strong {
     -webkit-transition: opacity .5s ease;
     transition: opacity .5s ease;
     white-space: nowrap;
+    pointer-events: none;
 }
 
 .tooltip::after {
