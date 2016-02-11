@@ -1,0 +1,6 @@
+{
+    "name": "rudloff-static",
+    "dependencies": {
+        "montserrat-googlefont": "*"
+    }
+}
