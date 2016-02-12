@@ -77,6 +77,8 @@ strong {
     color: #252525;
     opacity: 0;
     -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
     transition: opacity .5s ease;
     white-space: nowrap;
     pointer-events: none;
@@ -91,6 +93,9 @@ strong {
     content: '';
     background: #fcfcfc;
     -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
