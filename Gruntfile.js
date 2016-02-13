@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 }
             },
             'ftp-deploy': {
-                build: {
+                prod: {
                     auth: {
                         host: 'ftp.ouvaton.coop',
                         port: 21,
@@ -62,6 +62,14 @@ module.exports = function (grunt) {
                     dest: '/httpdocs/',
                     exclusions: ['.git', 'node_modules', '.ftppass']
                 }
+            },
+            surge: {
+                preprod: {
+                    options: {
+                        project: './',
+                        domain: 'rudloff.surge.sh'
+                    }
+                }
             }
         }
     );
@@ -69,7 +77,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-ftp-deploy');
+    grunt.loadNpmTasks('grunt-surge');
 
     grunt.registerTask('default', ['cssmin']);
     grunt.registerTask('lint', ['csslint']);
+    grunt.registerTask('prod', ['lint', 'default', 'ftp-deploy']);
+    grunt.registerTask('preprod', ['default', 'surge']);
 };
