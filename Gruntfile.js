@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                 prod: {
                     auth: {
                         host: 'ftp.ouvaton.coop',
-                        port: 21,
+                        port: 21
                     },
                     src: './',
                     dest: '/httpdocs/',
@@ -70,6 +70,34 @@ module.exports = function (grunt) {
                         domain: 'rudloff.surge.sh'
                     }
                 }
+            },
+            bower_concat: {
+                js: {
+                    dest: {
+                        'js': 'dist/_bower.js'
+                    },
+                    exclude: ['montserrat-googlefont']
+                }
+            },
+            uglify: {
+                combine: {
+                    files: {
+                        'dist/main.js': ['js/*.js']
+                    }
+                },
+                bower: {
+                    files: {
+                        'dist/bower.js': ['dist/_bower.js']
+                    }
+                }
+            },
+            jslint: {
+                js: {
+                    src: 'js/*.js'
+                },
+                Gruntfile: {
+                    src: 'Gruntfile.js'
+                }
             }
         }
     );
@@ -78,9 +106,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-ftp-deploy');
     grunt.loadNpmTasks('grunt-surge');
+    grunt.loadNpmTasks('grunt-bower-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-jslint');
 
-    grunt.registerTask('default', ['cssmin']);
-    grunt.registerTask('lint', ['csslint']);
+    grunt.registerTask('default', ['cssmin', 'bower_concat', 'uglify']);
+    grunt.registerTask('lint', ['csslint', 'jslint']);
     grunt.registerTask('prod', ['lint', 'default', 'ftp-deploy']);
     grunt.registerTask('preprod', ['default', 'surge']);
 };

@@ -1,6 +1,7 @@
 {
     "name": "rudloff-static",
     "dependencies": {
-        "montserrat-googlefont": "*"
+        "montserrat-googlefont": "*",
+        "konami-js": "~1.4.2"
     }
 }
