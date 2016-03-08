@@ -67,7 +67,7 @@ module.exports = function (grunt) {
                 preprod: {
                     options: {
                         project: './',
-                        domain: 'rudloff.surge.sh'
+                        domain: 'https://rudloff.surge.sh'
                     }
                 }
             },
