@@ -62,8 +62,13 @@ strong {
     width: 55px;
 }
 
+.part li a:hover,
+.part li a:focus {
+    opacity: 0.5;
+    outline: none;
+}
+
 .part li a:focus img, .part li a:hover img {
-    opacity: 0.7;
     outline: medium none;
 }
 
@@ -112,5 +117,10 @@ strong {
 @media all and (min-width: 480px) {
   .part li a:focus .tooltip, .part li a:hover .tooltip {
       opacity: .85;
+  }
+
+  .part li a:hover,
+  .part li a:focus {
+      opacity: 0.7;
   }
 }
