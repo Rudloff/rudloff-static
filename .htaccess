@@ -3,10 +3,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ / [R,QSA,L]
 
+Addtype font/truetype .ttf
+
 ExpiresActive On
 ExpiresByType text/css "access plus 1 month"
 ExpiresByType image/png "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType image/svg+xml "access plus 1 month"
 
-AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE image/svg+xml font/truetype
