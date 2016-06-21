@@ -64,8 +64,12 @@ strong {
 
 .part li a:hover,
 .part li a:focus {
-    opacity: 0.5;
     outline: none;
+}
+
+.part li a:hover img,
+.part li a:focus img {
+    opacity: 0.5;
 }
 
 .part li a:focus img, .part li a:hover img {
@@ -115,12 +119,17 @@ strong {
 }
 
 @media all and (min-width: 480px) {
-  .part li a:focus .tooltip, .part li a:hover .tooltip {
-      opacity: .85;
+  .part li a:hover .tooltip {
+      opacity: 1;
+      z-index: 10;
   }
 
-  .part li a:hover,
-  .part li a:focus {
+  .part li a:focus .tooltip {
+      opacity: 0.7;
+  }
+
+  .part li a:hover img,
+  .part li a:focus img {
       opacity: 0.7;
   }
 }
