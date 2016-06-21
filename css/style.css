@@ -65,10 +65,12 @@ strong {
 .part li a:hover,
 .part li a:focus {
     outline: none;
+    opacity: 1;
 }
 
 .part li a:hover img,
 .part li a:focus img {
+    outline: none;
     opacity: 0.5;
 }
 
