@@ -98,6 +98,19 @@ module.exports = function (grunt) {
                 Gruntfile: {
                     src: 'Gruntfile.js'
                 }
+            },
+            jsonlint: {
+                manifests: {
+                    src: ['*.json', '*.webapp'],
+                    options: {
+                        format: true
+                    }
+                }
+            },
+            fixpack: {
+                package: {
+                    src: 'package.json'
+                }
             }
         }
     );
@@ -109,9 +122,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jslint');
+    grunt.loadNpmTasks('grunt-jsonlint');
+    grunt.loadNpmTasks('grunt-fixpack');
 
     grunt.registerTask('default', ['cssmin', 'bower_concat', 'uglify']);
-    grunt.registerTask('lint', ['csslint', 'jslint']);
+    grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
     grunt.registerTask('prod', ['lint', 'default', 'ftp-deploy']);
     grunt.registerTask('preprod', ['default', 'surge']);
 };
