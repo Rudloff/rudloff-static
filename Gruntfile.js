@@ -128,5 +128,5 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['cssmin', 'bower_concat', 'uglify']);
     grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
     grunt.registerTask('prod', ['lint', 'default', 'ftp-deploy']);
-    grunt.registerTask('preprod', ['default', 'surge']);
+    grunt.registerTask('staging', ['default', 'surge']);
 };
