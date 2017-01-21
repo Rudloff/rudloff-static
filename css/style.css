@@ -18,13 +18,13 @@ h2 {
 }
 
 strong {
-    font-weight: 300;
     font-size: 1.2em;
+    font-weight: 300;
 }
 
 .cat {
-    margin-top: 4em;
     margin-bottom: 4em;
+    margin-top: 4em;
 }
 
 .part {
@@ -33,9 +33,9 @@ strong {
 
 .part li {
     display: inline-block;
-    position: relative;
     list-style-type: none;
     margin-left: 5px;
+    position: relative;
 }
 
 
@@ -44,13 +44,13 @@ strong {
 }
 
 .part li img {
-    max-width: 45px;
     max-height: 45px;
+    max-width: 45px;
 }
 
 .small_cat li img {
-    max-width: 35px;
     max-height: 35px;
+    max-width: 35px;
     min-height: 35px;
 }
 
@@ -64,14 +64,14 @@ strong {
 
 .part li a:hover,
 .part li a:focus {
-    outline: none;
     opacity: 1;
+    outline: none;
 }
 
 .part li a:hover img,
 .part li a:focus img {
-    outline: none;
     opacity: 0.5;
+    outline: none;
 }
 
 .part li a:focus img, .part li a:hover img {
@@ -79,36 +79,38 @@ strong {
 }
 
 .tooltip {
-    display: block;
-    position: absolute;
-        bottom: -45px; right: -9px;
-    padding: .25em .5em;
     background-color: #fcfcfc;
     border-radius: .2rem;
+    bottom: -45px;
     color: #252525;
+    display: block;
     opacity: 0;
+    padding: .25em .5em;
+    pointer-events: none;
+    position: absolute;
+    right: -9px;
     -webkit-transition: opacity .5s ease;
     -moz-transition: opacity .5s ease;
     -o-transition: opacity .5s ease;
     transition: opacity .5s ease;
     white-space: nowrap;
-    pointer-events: none;
     z-index: 20;
 }
 
 .tooltip::after {
-    display: block;
-    position: absolute;
-        top: -5px; right: 32px;
-    height: .6rem;
-    width: .6rem;
-    content: '';
     background: #fcfcfc;
+    content: '';
+    display: block;
+    height: .6rem;
+    position: absolute;
+    right: 32px;
+    top: -5px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: .6rem;
 }
 
 .part li:nth-of-type(-n + 2) a .tooltip {
