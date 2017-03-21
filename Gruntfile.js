@@ -64,7 +64,7 @@ module.exports = function (grunt) {
                 }
             },
             surge: {
-                preprod: {
+                staging: {
                     options: {
                         project: './',
                         domain: 'https://rudloff.surge.sh'
