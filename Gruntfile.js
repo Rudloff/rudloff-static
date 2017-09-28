@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                     'zero-units': 2
                 },
                 css: {
-                    src:  ['css/*.css']
+                    src: ['css/*.css']
                 }
             },
             'ftp-deploy': {
