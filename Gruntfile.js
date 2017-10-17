@@ -71,23 +71,10 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            bower_concat: {
-                js: {
-                    dest: {
-                        'js': 'dist/_bower.js'
-                    },
-                    exclude: ['montserrat-googlefont']
-                }
-            },
             uglify: {
                 combine: {
                     files: {
                         'dist/main.js': ['js/*.js']
-                    }
-                },
-                bower: {
-                    files: {
-                        'dist/bower.js': ['dist/_bower.js']
                     }
                 }
             },
@@ -119,13 +106,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-ftp-deploy');
     grunt.loadNpmTasks('grunt-surge');
-    grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-jsonlint');
     grunt.loadNpmTasks('grunt-fixpack');
 
-    grunt.registerTask('default', ['cssmin', 'bower_concat', 'uglify']);
+    grunt.registerTask('default', ['cssmin', 'uglify']);
     grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
     grunt.registerTask('prod', ['lint', 'default', 'ftp-deploy']);
     grunt.registerTask('staging', ['default', 'surge']);
