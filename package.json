@@ -5,16 +5,16 @@
   "author": "Pierre Rudloff",
   "bugs": "https://github.com/Rudloff/rudloff-static/issues",
   "dependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-cssmin": "~2.2.1",
+    "grunt-contrib-uglify": "~3.1.0",
+    "grunt-ftp-deploy": "~0.1.10",
     "konami-code.js": "~1.4.2",
     "typeface-montserrat": "~0.0.37"
   },
   "devDependencies": {
-    "grunt": "~1.0.1",
     "grunt-contrib-csslint": "~2.0.0",
-    "grunt-contrib-cssmin": "~2.2.1",
-    "grunt-contrib-uglify": "~3.1.0",
     "grunt-fixpack": "~0.1.0",
-    "grunt-ftp-deploy": "~0.1.10",
     "grunt-jslint": "~1.1.14",
     "grunt-jsonlint": "~1.1.0",
     "grunt-surge": "~0.7.0"

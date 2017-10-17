@@ -60,7 +60,7 @@ module.exports = function (grunt) {
                     },
                     src: './',
                     dest: '/httpdocs/',
-                    exclusions: ['.git', 'node_modules', '.ftppass']
+                    exclusions: ['.git', '.ftppass']
                 }
             },
             surge: {
@@ -113,6 +113,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['cssmin', 'uglify']);
     grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
-    grunt.registerTask('prod', ['lint', 'default', 'ftp-deploy']);
+    grunt.registerTask('prod', ['default', 'ftp-deploy']);
     grunt.registerTask('staging', ['default', 'surge']);
 };
