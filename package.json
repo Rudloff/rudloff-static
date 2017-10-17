@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "author": "Pierre Rudloff",
   "bugs": "https://github.com/Rudloff/rudloff-static/issues",
+  "dependencies": {
+    "konami-code.js": "~1.4.2",
+    "typeface-montserrat": "~0.0.37"
+  },
   "devDependencies": {
     "grunt": "~1.0.1",
     "grunt-contrib-csslint": "~2.0.0",
@@ -15,6 +19,9 @@
     "grunt-jsonlint": "~1.1.0",
     "grunt-surge": "~0.7.0"
   },
+  "engines": {
+    "yarn": ">= 1.0.0"
+  },
   "homepage": "https://www.rudloff.pro/",
   "keywords": [
     "html",
@@ -25,12 +32,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Rudloff/rudloff-static.git"
-  },
-  "dependencies": {
-    "konami-code.js": "~1.4.2",
-    "typeface-montserrat": "~0.0.37"
-  },
-  "engines": {
-    "yarn": ">= 1.0.0"
   }
 }
