@@ -55,12 +55,25 @@ module.exports = function (grunt) {
             'ftp-deploy': {
                 prod: {
                     auth: {
-                        host: 'ftp.ouvaton.coop',
-                        port: 21
+                        host: 'ftp.ouvaton.coop'
                     },
                     src: './',
                     dest: '/httpdocs/',
-                    exclusions: ['.git', '.ftppass']
+                    exclusions: ['.git', '.ftppass', './node_modules/**', './node_modules/.*']
+                },
+                'konami-code.js': {
+                    auth: {
+                        host: 'ftp.ouvaton.coop'
+                    },
+                    src: './node_modules/konami-code.js/',
+                    dest: '/httpdocs/node_modules/konami-code.js/'
+                },
+                'typeface-montserrat': {
+                    auth: {
+                        host: 'ftp.ouvaton.coop'
+                    },
+                    src: './node_modules/typeface-montserrat/',
+                    dest: '/httpdocs/node_modules/typeface-montserrat/'
                 }
             },
             surge: {
