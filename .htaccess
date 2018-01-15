@@ -12,7 +12,7 @@ ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType image/svg+xml "access plus 1 month"
 ExpiresByType font/truetype "access plus 1 month"
 
-AddOutputFilterByType DEFLATE image/svg+xml font/truetype
+AddOutputFilterByType DEFLATE image/svg+xml font/truetype application/javascript text/html
 
 Header set Strict-Transport-Security "max-age=31536000"
 
