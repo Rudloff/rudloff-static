@@ -21,3 +21,8 @@ Header set X-Content-Type-Options nosniff
 Header set X-XSS-Protection "1; mode=block"
 Header set Content-Security-Policy "default-src 'self'; object-src 'none'"
 Header set Referrer-Policy strict-origin
+
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [or]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^ https://rudloff.pro%{REQUEST_URI} [L,QSA,R=permanent]
