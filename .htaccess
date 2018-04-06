@@ -14,7 +14,7 @@ ExpiresByType font/truetype "access plus 1 month"
 
 AddOutputFilterByType DEFLATE image/svg+xml font/truetype application/javascript text/html text/css
 
-Header set Strict-Transport-Security "max-age=31536000"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
 Header set X-Frame-Options DENY
 Header set X-Content-Type-Options nosniff
