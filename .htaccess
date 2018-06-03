@@ -26,3 +26,5 @@ RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} =http [or]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$
 RewriteRule ^ https://rudloff.pro%{REQUEST_URI} [L,QSA,R=permanent]
+
+DirectoryIndex index.xhtml
