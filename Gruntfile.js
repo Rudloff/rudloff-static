@@ -76,14 +76,6 @@ module.exports = function (grunt) {
                     dest: '/httpdocs/node_modules/typeface-montserrat/'
                 }
             },
-            surge: {
-                staging: {
-                    options: {
-                        project: './',
-                        domain: 'https://rudloff.surge.sh'
-                    }
-                }
-            },
             uglify: {
                 combine: {
                     files: {
@@ -118,7 +110,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-ftp-deploy');
-    grunt.loadNpmTasks('grunt-surge');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-jsonlint');
@@ -127,5 +118,4 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['cssmin', 'uglify']);
     grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
     grunt.registerTask('prod', ['default', 'ftp-deploy']);
-    grunt.registerTask('staging', ['default', 'surge']);
 };

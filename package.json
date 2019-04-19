@@ -16,8 +16,7 @@
     "grunt-contrib-csslint": "~2.0.0",
     "grunt-fixpack": "~0.1.0",
     "grunt-jslint": "~1.1.14",
-    "grunt-jsonlint": "~1.1.0",
-    "grunt-surge": "~0.7.0"
+    "grunt-jsonlint": "~1.1.0"
   },
   "homepage": "https://www.rudloff.pro/",
   "keywords": [
