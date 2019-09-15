@@ -1,4 +1,7 @@
-Addtype font/truetype .ttf
+AddCharset UTF-8 .css .js .svg .xhtml
+AddType font/truetype .ttf
+AddType font/woff2 .woff2
+AddType text/xml .xhtml
 
 ExpiresActive On
 ExpiresByType text/css "access plus 1 month"
