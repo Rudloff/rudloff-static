@@ -8,7 +8,6 @@
     "grunt": "~1.0.1",
     "grunt-contrib-cssmin": "~2.2.1",
     "grunt-contrib-uglify": "~3.3.0",
-    "grunt-ftp-deploy": "~0.2.0",
     "konami-code.js": "~1.4.2",
     "typeface-montserrat": "~0.0.37"
   },
@@ -29,6 +28,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Rudloff/rudloff-static.git"
+  },
+  "resolutions": {
+    "grunt-fixpack/fixpack/rc": "^1.2.8",
+    "grunt-githooks/handlebars": "^4.3.0"
   },
   "scripts": {
     "prepare": "grunt githooks"

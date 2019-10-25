@@ -52,30 +52,6 @@ module.exports = function (grunt) {
                     src: ['css/*.css']
                 }
             },
-            'ftp-deploy': {
-                prod: {
-                    auth: {
-                        host: 'ftp.ouvaton.coop'
-                    },
-                    src: './',
-                    dest: '/httpdocs/',
-                    exclusions: ['.git', '.ftppass', './node_modules/**', './node_modules/.*']
-                },
-                'konami-code.js': {
-                    auth: {
-                        host: 'ftp.ouvaton.coop'
-                    },
-                    src: './node_modules/konami-code.js/',
-                    dest: '/httpdocs/node_modules/konami-code.js/'
-                },
-                'typeface-montserrat': {
-                    auth: {
-                        host: 'ftp.ouvaton.coop'
-                    },
-                    src: './node_modules/typeface-montserrat/',
-                    dest: '/httpdocs/node_modules/typeface-montserrat/'
-                }
-            },
             uglify: {
                 combine: {
                     files: {
@@ -114,7 +90,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-ftp-deploy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-jsonlint');
@@ -123,5 +98,4 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['cssmin', 'uglify']);
     grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
-    grunt.registerTask('prod', ['default', 'ftp-deploy']);
 };
