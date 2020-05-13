@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../node_modules/typeface-montserrat/files/montserrat-latin-400.woff2');
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../node_modules/typeface-montserrat/files/montserrat-latin-400.woff2');
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../node_modules/typeface-montserrat/files/montserrat-latin-300.woff2');
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../node_modules/typeface-montserrat/files/montserrat-latin-300.woff2');
 }
