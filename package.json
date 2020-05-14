@@ -30,10 +30,6 @@
     "type": "git",
     "url": "https://github.com/Rudloff/rudloff-static.git"
   },
-  "resolutions": {
-    "grunt-fixpack/fixpack/rc": "^1.2.8",
-    "grunt-githooks/handlebars": "^4.3.0"
-  },
   "scripts": {
     "prepare": "grunt githooks"
   }
