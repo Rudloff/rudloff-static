@@ -1,4 +1,3 @@
-/*jslint node: true */
 module.exports = function (grunt) {
     'use strict';
     grunt.initConfig(
@@ -25,7 +24,7 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            jslint: {
+            jshint: {
                 js: {
                     src: 'js/*.js'
                 },
@@ -52,10 +51,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-jslint');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-jsonlint');
     grunt.loadNpmTasks('grunt-fixpack');
 
     grunt.registerTask('default', ['cssmin', 'uglify']);
-    grunt.registerTask('lint', ['csslint', 'jslint', 'fixpack', 'jsonlint']);
+    grunt.registerTask('lint', ['csslint', 'jshint', 'fixpack', 'jsonlint']);
 };

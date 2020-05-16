@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "grunt-contrib-csslint": "~2.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
     "grunt-fixpack": "^0.2.1",
-    "grunt-jslint": "~1.1.14",
     "grunt-jsonlint": "~1.1.0",
     "husky": "^4.2.5"
   },
