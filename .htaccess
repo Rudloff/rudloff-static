@@ -3,7 +3,7 @@ AddType font/truetype .ttf
 AddType font/woff2 .woff2
 
 ExpiresActive On
-ExpiresByType text/xml "access plus 3 minutes"
+ExpiresByType application/xhtml+xml "access plus 3 minutes"
 ExpiresByType text/css "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
 ExpiresByType application/javascript "access plus 1 year"
@@ -11,7 +11,7 @@ ExpiresByType image/svg+xml "access plus 1 year"
 ExpiresByType font/truetype "access plus 1 year"
 ExpiresByType font/woff2 "access plus 1 year"
 
-AddOutputFilterByType DEFLATE image/svg+xml font/truetype application/javascript text/html text/css text/xml
+AddOutputFilterByType DEFLATE image/svg+xml font/truetype application/javascript text/html text/css application/xhtml+xml
 
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
