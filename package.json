@@ -8,7 +8,6 @@
     "grunt": "^1.1.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-uglify": "^4.0.1",
-    "handlebars": "^4.3.0",
     "konami-code.js": "^1.5.1",
     "typeface-montserrat": "^0.0.75"
   },
