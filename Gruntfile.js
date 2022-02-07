@@ -1,3 +1,5 @@
+/* global module */
+
 /**
  * Initialize Grunt config.
  * @param {Object} grunt
