@@ -1,2 +1,3 @@
 # rudloff-static
-Static content for rudloff.pro
+
+Static content for <https://rudloff.pro/>
