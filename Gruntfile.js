@@ -41,14 +41,6 @@ function initGruntConfig(grunt) {
                     src: 'Gruntfile.js'
                 }
             },
-            jsonlint: {
-                manifests: {
-                    src: '*.json',
-                    options: {
-                        format: true
-                    }
-                }
-            },
             fixpack: {
                 package: {
                     src: 'package.json'
@@ -61,11 +53,10 @@ function initGruntConfig(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-jsonlint');
     grunt.loadNpmTasks('grunt-fixpack');
 
     grunt.registerTask('default', ['cssmin', 'uglify']);
-    grunt.registerTask('lint', ['csslint', 'jshint', 'fixpack', 'jsonlint']);
+    grunt.registerTask('lint', ['csslint', 'jshint', 'fixpack']);
 }
 
 module.exports = initGruntConfig;
